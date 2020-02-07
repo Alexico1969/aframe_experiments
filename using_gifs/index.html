@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+	<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <a-scene>
+	
+	<a-assets>
+      <img id="space" src="temple.jpg">
+    </a-assets>
+
+	  <!-- unused plane -->
+      <!-- a-plane position="0 0 0" rotation="90 0 0" width="10" height="10" color="#7BC8A4"></a-plane -->
+
+	  <!-- door with gif -->
+	  <a-entity
+            position = "0 -1 -8.2"
+			scale = "8 16 8"
+	        geometry="primitive:plane;" material="shader:gif;src:url(smoke.gif);color:green;opacity:.6"></a-entity>
+      
+	  <!-- Elven gate -->
+	  <a-entity
+            position = "0 -1 -8.1"
+			width="10"
+			height="10"
+			scale = "8 16 8"
+	        geometry="primitive:plane;" material="shader:flat;src:url(elf_gate.jpg);color:green;opacity:.3"></a-entity>
+	  
+	  
+	  <!-- sky -->
+	  <a-sky color="#001100"></a-sky>
+	  <!-- a-sky src="#space"></a-sky -->
+	  
+	  <!-- Text -->
+	  <!--a-text 
+			value="Speak Friend"
+			position="0 3 -8"
+			color="lightgreen"
+			align="center"
+			width="10"
+			height="10"
+			font="Pacifico"
+			
+	  ></a-text-->
+		
+	  <a-entity 
+			text="
+				value:Speak Friend; 
+				color:#11AA11; 
+				shader: msdf; 
+				font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/berkshireswash/BerkshireSwash-Regular.json;" 
+			position="3.6 1.4 -8.1" 
+			scale="10 10 10"
+	  ></a-entity>   
+
+	  <a-sound 
+			src="src: url(macabre.mp3)" 
+			autoplay="true" 
+			position="0 2 5"
+	  ></a-sound>
+		
+		
+
+
+		
+    </a-scene>
+  </body>
+</html>
